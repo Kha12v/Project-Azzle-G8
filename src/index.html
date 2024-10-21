@@ -4,14 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Ouput CSS-->
     <link rel="stylesheet" href="../src/output.css">
+    <!--Import Site Font-->
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <!--Import Jos Animation CSS-->
+    <link rel="stylesheet" href="../css/jos.css">
     <title>Azzle G8</title>
 </head>
 
 <body>
-
+    <div class="page-wrapper relative z-[1] bg-white">
+        <!--Section Header-->
+        <header class="site-header site-header--absolute is--white py-3" id="sticky-menu">
+            <div class="global-container">
+                <div class="flex items-center justify-between gap-x-8">
+                    <!--Logo-->
+                    <a href="#">
+                        <img src="../img/icon/logo-dark.png" alt="logo-dark" width="96" height="24">
+                    </a>
+                    <!--Nav-->
+                    <div class="menu-block-wrapper">
+                        <div class="menu-overlay"></div>
+                        <nav class="menu-block" id="append-menu-header">
+                            <div class="mobile-menu-head">
+                                <div class="go-back">
+                                    <img class="dropdown-icon" width="16" height="16"
+                                        src="../img/icon/icon-black-long-arrow-right.svg" alt="cheveron-right">
+                                </div>
+                                <div class="current-menu-title"></div>
+                                <div class="mobile-menu-close">×</div>
+                            </div>
+                            <ul class="site-menu-main">
+                                <!--Demo-->
+                                <li class="nav-item nav-item-has-children">
+                                    <a href="#" class="nav-link-item drop-trigger">Demo
+                                        <img class="dropdown-icon" width="16" height="16"
+                                            src="../img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
+                                    </a>
+                                    <!--tag ul, li -> Demo: Home 01 ~ 04-->
+                                    <ul class="sub-menu" id="submenu-1">
+                                        <li class="sub-menu--item">
+                                            <a href="#">Home 01</a>
+                                        </li>
+                                        <li class="sub-menu--item">
+                                            <a href="#">Home 02</a>
+                                        </li>
+                                        <li class="sub-menu--item">
+                                            <a href="#">Home 03</a>
+                                        </li>
+                                        <li class="sub-menu--item">
+                                            <a href="#">Home 04</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--About-->
+                                <li class="nav-item">
+                                    <a class="nav-link-item" href="#">About</a>
+                                </li>
+                                <!--Services-->
+                                <li class="nav-item nav-item-has-children">
+                                    <a href="#" class="nav-link-item drop-trigger">Services
+                                        <img class="dropdown-icon" width="16" height="16"
+                                            src="../img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
+                                    </a>
+                                    <!--tag ul, li -> Services: Services, Services Details-->
+                                    <ul class="sub-menu" id="submenu-2">
+                                        <li class="sub-menu--item">
+                                            <a href="#">Services</a>
+                                        </li>
+                                        <li class="sub-menu--item">
+                                            <a href="#">Services Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--Pages-->
+                                <li class="nav-item nav-item-has-children">
+                                    <a href="#" class="nav-link-item drop-trigger">Pages
+                                        <img class="dropdown-icon" width="16" height="16"
+                                            src="../img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
+                                    </a>
+                                    <!--tag ul, li -> Pages-->
+                                    <ul class="sub-menu" id="submenu-3">
+                                        <!--tag li: Blogs-->
+                                        <li class="sub-menu--item nav-item-has-children">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">Blogs
+                                                <img class="dropdown-icon" width="16" height="16"
+                                                    src="../img/icon/icon-black-cheveron-right.svg"
+                                                    alt="cheveron-right">
+                                            </a>
+                                            <ul class="sub-menu shape-none" id="submenu-4">
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Blogs</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Blog Details</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--tag li: Team-->
+                                        <li class="sub-menu--item nav-item-has-children">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">Team
+                                                <img class="dropdown-icon" width="16" height="16"
+                                                    src="../img/icon/icon-black-cheveron-right.svg"
+                                                    alt="cheveron-right">
+                                            </a>
+                                            <ul class="sub-menu shape-none" id="submenu-5">
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Teams</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Team Details</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--tag li: FAQ-->
+                                        <li class="sub-menu--item nav-item-has-children">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">FAQ
+                                                <img class="dropdown-icon" width="16" height="16"
+                                                    src="../img/icon/icon-black-cheveron-right.svg"
+                                                    alt="cheveron-right">
+                                            </a>
+                                            <ul class="sub-menu shape-none" id="submenu-6">
+                                                <li class="sub-menu--item">
+                                                    <a href="#">FAQ-1</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">FAQ-2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--tag li: Portfolio-->
+                                        <li class="sub-menu--item nav-item-has-children">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">Portfolio
+                                                <img class="dropdown-icon" width="16" height="16"
+                                                    src="../img/icon/icon-black-cheveron-right.svg"
+                                                    alt="cheveron-right">
+                                            </a>
+                                            <ul class="sub-menu shape-none" id="submenu-7">
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Portfolio</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Portfolio Details</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--tag li: Pricing-->
+                                        <li class="sub-menu--item">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">Pricing</a>
+                                        </li>
+                                        <!--tag li: Utilities: 4 ul/a/li-->
+                                        <li class="sub-menu--item nav-item-has-children">
+                                            <a class="drop-trigger" data-menu-get="h3" href="#">Utilities
+                                                <img class="dropdown-icon" width="16" height="16"
+                                                    src="../img/icon/icon-black-cheveron-right.svg"
+                                                    alt="cheveron-right">
+                                            </a>
+                                            <ul class="sub-menu shape-none" id="submenu-8">
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Error 404</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Login</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">SignUp</a>
+                                                </li>
+                                                <li class="sub-menu--item">
+                                                    <a href="#">Reset Password</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--Contacts-->
+                                <li class="nav-item">
+                                    <a class="nav-link-item" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--User Event-->
+                    <div class="flex items-center gap-6">
+                        <a class="button hidden rounded-[50px] border-[#7F8995] bg-transparent text-black after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
+                            href="#">Login</a>
+                        <a class="button hidden rounded-[50px] border-black bg-black text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
+                            href="#">Sign up free</a>
+                        <!--Responsive Offcanvas Menu Button-->
+                        <div class="block lg:hidden">
+                            <button id="openBtn" class="hamburger-menu mobile-menu-trigger">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Phần chính của trang web nằm trong tag <main>, mỗi trang chỉ duy nhất 1 <main>-->
+        <main class="main-wrapper relative overflow-hidden">
+            <!--Section Hero-->
+            <section id="section-hero">
+                <!--Section Spacer-->
+                <div>
+                    <div class="global-container">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <!--Import Flowbite JS-->
     <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <!--Import Jos Js-->
+    <script src="../js/jos.min.js"></script>
 </body>
 
 </html>
