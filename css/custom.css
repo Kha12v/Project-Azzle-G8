@@ -8,8 +8,6 @@
   filter: blur(55px);
 }
 
-
-/* Custom CSS for accordion */
 .accordion-item .accordion-header {
   cursor: pointer;
   transition: all 0.3s ease-in-out;

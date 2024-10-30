@@ -285,10 +285,10 @@ h5 {
     background-color: rgb(254 51 10 / var(--tw-bg-opacity));
 }
 
-.checked\:after\:bg-\[url\(\.\.\/img\/th-1\/icon-white-checkmark-filled\.svg\)\]:checked::after {
+/* .checked\:after\:bg-\[url\(\.\.\/img\/th-1\/icon-white-checkmark-filled\.svg\)\]:checked::after {
     content: var(--tw-content);
     background-image: url(../img/th-1/icon-white-checkmark-filled.svg);
-}
+} */
 
 .hover\:border-colorGreen:hover {
     --tw-border-opacity: 1;
