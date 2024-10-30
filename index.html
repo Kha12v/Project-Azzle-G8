@@ -1,583 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Import Site Font-->
-    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./fonts/fonts.css" />
     <!--Import Swiper CSS-->
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <!--Import Jos Animation CSS-->
-    <link rel="stylesheet" href="./css/jos.css">
+    <link rel="stylesheet" href="./css/jos.css" />
     <!--Import Menu CSS-->
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/menu.css" />
     <!--Import Custorm CSS-->
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/custom.css" />
     <!--Import Ouput CSS-->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Azzle G8</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="page-wrapper relative z-[1] bg-white">
-        <!--Section Header-->
-        <header class="site-header site-header--absolute is--white py-3" id="sticky-menu">
-            <div class="global-container">
-                <div class="flex items-center justify-between gap-x-8">
-                    <!--Logo-->
-                    <a href="#">
-                        <img src="./img/icon/logo-dark.png" alt="logo-dark" width="96" height="24">
+      <!--Section Header-->
+      <header
+        class="site-header site-header--absolute is--white py-3"
+        id="sticky-menu"
+      >
+        <div class="global-container">
+          <div class="flex items-center justify-between gap-x-8">
+            <!--Logo-->
+            <a href="#">
+              <img
+                src="./img/icon/logo-dark.png"
+                alt="logo-dark"
+                width="96"
+                height="24"
+              />
+            </a>
+            <!--Nav-->
+            <div class="menu-block-wrapper">
+              <div class="menu-overlay"></div>
+              <nav class="menu-block" id="append-menu-header">
+                <div class="mobile-menu-head">
+                  <div class="go-back">
+                    <img
+                      class="dropdown-icon"
+                      width="16"
+                      height="16"
+                      src="./img/icon/icon-black-long-arrow-right.svg"
+                      alt="cheveron-right"
+                    />
+                  </div>
+                  <div class="current-menu-title"></div>
+                  <div class="mobile-menu-close">×</div>
+                </div>
+                <ul class="site-menu-main">
+                  <!--Demo-->
+                  <li class="nav-item nav-item-has-children">
+                    <a href="#" class="nav-link-item drop-trigger"
+                      >Demo
+                      <img
+                        class="dropdown-icon"
+                        width="16"
+                        height="16"
+                        src="./img/icon/icon-black-cheveron-right.svg"
+                        alt="cheveron-right"
+                      />
                     </a>
-                    <!--Nav-->
-                    <div class="menu-block-wrapper">
-                        <div class="menu-overlay"></div>
-                        <nav class="menu-block" id="append-menu-header">
-                            <div class="mobile-menu-head">
-                                <div class="go-back">
-                                    <img class="dropdown-icon" width="16" height="16"
-                                        src="./img/icon/icon-black-long-arrow-right.svg" alt="cheveron-right">
-                                </div>
-                                <div class="current-menu-title"></div>
-                                <div class="mobile-menu-close">×</div>
-                            </div>
-                            <ul class="site-menu-main">
-                                <!--Demo-->
-                                <li class="nav-item nav-item-has-children">
-                                    <a href="#" class="nav-link-item drop-trigger">Demo
-                                        <img class="dropdown-icon" width="16" height="16"
-                                            src="./img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
-                                    </a>
-                                    <!--tag ul, li -> Demo: Home 01 ~ 04-->
-                                    <ul class="sub-menu" id="submenu-1">
-                                        <li class="sub-menu--item">
-                                            <a href="#">Home 01</a>
-                                        </li>
-                                        <li class="sub-menu--item">
-                                            <a href="#">Home 02</a>
-                                        </li>
-                                        <li class="sub-menu--item">
-                                            <a href="#">Home 03</a>
-                                        </li>
-                                        <li class="sub-menu--item">
-                                            <a href="#">Home 04</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!--About-->
-                                <li class="nav-item">
-                                    <a class="nav-link-item" href="#">About</a>
-                                </li>
-                                <!--Services-->
-                                <li class="nav-item nav-item-has-children">
-                                    <a href="#" class="nav-link-item drop-trigger">Services
-                                        <img class="dropdown-icon" width="16" height="16"
-                                            src="./img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
-                                    </a>
-                                    <!--tag ul, li -> Services: Services, Services Details-->
-                                    <ul class="sub-menu" id="submenu-2">
-                                        <li class="sub-menu--item">
-                                            <a href="#">Services</a>
-                                        </li>
-                                        <li class="sub-menu--item">
-                                            <a href="#">Services Details</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!--Pages-->
-                                <li class="nav-item nav-item-has-children">
-                                    <a href="#" class="nav-link-item drop-trigger">Pages
-                                        <img class="dropdown-icon" width="16" height="16"
-                                            src="./img/icon/icon-black-cheveron-right.svg" alt="cheveron-right">
-                                    </a>
-                                    <!--tag ul, li -> Pages-->
-                                    <ul class="sub-menu" id="submenu-3">
-                                        <!--tag li: Blogs-->
-                                        <li class="sub-menu--item nav-item-has-children">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">Blogs
-                                                <img class="dropdown-icon" width="16" height="16"
-                                                    src="./img/icon/icon-black-cheveron-right.svg"
-                                                    alt="cheveron-right">
-                                            </a>
-                                            <ul class="sub-menu shape-none" id="submenu-4">
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Blogs</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <!--tag li: Team-->
-                                        <li class="sub-menu--item nav-item-has-children">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">Team
-                                                <img class="dropdown-icon" width="16" height="16"
-                                                    src="./img/icon/icon-black-cheveron-right.svg"
-                                                    alt="cheveron-right">
-                                            </a>
-                                            <ul class="sub-menu shape-none" id="submenu-5">
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Teams</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Team Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <!--tag li: FAQ-->
-                                        <li class="sub-menu--item nav-item-has-children">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">FAQ
-                                                <img class="dropdown-icon" width="16" height="16"
-                                                    src="./img/icon/icon-black-cheveron-right.svg"
-                                                    alt="cheveron-right">
-                                            </a>
-                                            <ul class="sub-menu shape-none" id="submenu-6">
-                                                <li class="sub-menu--item">
-                                                    <a href="#">FAQ-1</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">FAQ-2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <!--tag li: Portfolio-->
-                                        <li class="sub-menu--item nav-item-has-children">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">Portfolio
-                                                <img class="dropdown-icon" width="16" height="16"
-                                                    src="./img/icon/icon-black-cheveron-right.svg"
-                                                    alt="cheveron-right">
-                                            </a>
-                                            <ul class="sub-menu shape-none" id="submenu-7">
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Portfolio</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Portfolio Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <!--tag li: Pricing-->
-                                        <li class="sub-menu--item">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">Pricing</a>
-                                        </li>
-                                        <!--tag li: Utilities: 4 ul/a/li-->
-                                        <li class="sub-menu--item nav-item-has-children">
-                                            <a class="drop-trigger" data-menu-get="h3" href="#">Utilities
-                                                <img class="dropdown-icon" width="16" height="16"
-                                                    src="./img/icon/icon-black-cheveron-right.svg"
-                                                    alt="cheveron-right">
-                                            </a>
-                                            <ul class="sub-menu shape-none" id="submenu-8">
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Error 404</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Login</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">SignUp</a>
-                                                </li>
-                                                <li class="sub-menu--item">
-                                                    <a href="#">Reset Password</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!--Contacts-->
-                                <li class="nav-item">
-                                    <a class="nav-link-item" href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!--User Event-->
-                    <div class="flex items-center gap-6">
-                        <a class="button hidden rounded-[50px] border-[#7F8995] bg-transparent text-black after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
-                            href="#">Login</a>
-                        <a class="button hidden rounded-[50px] border-black bg-black text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
-                            href="#">Sign up free</a>
-                        <!--Responsive Offcanvas Menu Button-->
-                        <div class="block lg:hidden">
-                            <button id="openBtn" class="hamburger-menu mobile-menu-trigger">
-                                <span></span><span></span><span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Kha: Hoàn thành build header-->
-        </header>
-        <!--Phần chính của trang web nằm trong tag <main>, mỗi trang chỉ duy nhất 1 <main>-->
-        <main class="main-wrapper relative overflow-hidden">
-            <!--Section Hero-->
-            <section id="section-hero">
-                <!--Section Spacer-->
-                <div
-                    class="relative z-[1] overflow-hidden rounded-bl-[30px] rounded-br-[30px] bg-colorLinenRuffle pb-20 pt-28 lg:rounded-bl-[50px] lg:rounded-br-[50px] lg:pb-24 lg:pt-32 xl:pt-40 xxl:pb-[133px] xxl:pt-[195px]">
-                    <div class="global-container">
-                        <!--Xử lí phần text, button-->
-                        <div class="mb-14 flex flex-col items-center text-center lg:mb-20">
-                            <!--Text: Simplify your SaaS solution with AI-->
-                            <h1 class="slide-from-bottom mb-6 max-w-[510px] lg:max-w-[768px] xl:max-w-[1076px] jos"
-                                data-jos_once="
-                                1" data-jos_animation="fade-up" data-jos_counter="1" data-jos_scrolldirection="down">
-                                Simplify your SaaS solution with AI</h1>
-                            <!--Tag <p>-->
-                            <p class="slide-from-bottom mb-11 max-w-[700px] text-lg font-semibold sm:text-xl xl:max-w-[980px] jos"
-                                data-jos_once="1" data-jos_animation="fade-up" data-jos_counter="1"
-                                data-jos_scrolldirection="down">Our AI SAAS tool is a cloud-based software delivery
-                                model. It
-                                helps businesses forecast demand for products and services and
-                                optimize inventory management and supply chain operations.</p>
-                            <!--2 button, sử dụng các class tái sử dụng code -->
-                            <div class="flex flex-wrap justify-center gap-6 jos" data-jos_animation="fade"
-                                data-jos_once="1" data-jos_counter="1" data-jos_scrolldirection="down">
-                                <a href="#"
-                                    class="button rounded-[50px] border-2 border-black bg-black py-4 text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white">Get
-                                    started for free</a>
-                                <a href="#"
-                                    class="button rounded-[50px] border-2 border-black bg-transparent py-4 text-black after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white">Learn
-                                    more</a>
-                            </div>
-                        </div>
-                        <!--Xử lí phần image-->
-                        <div class="hero-img overflow-hidden rounded-2xl bg-black jos" data-jos_animation="zoom"
-                            data-jos_once="1" data-jos_counter="1" data-jos_scrolldirection="down">
-                            <img src="./img/layout/hero-dashboard.jpg" alt="hero-dashboard" width="1296" height="640"
-                                class="h-auto w-full">
-                        </div>
-                        <div class="my-10 h-[1px] w-full bg-[#DBD6CF] lg:my-16 xl:my-20"></div>
-                        <div class="mx-auto mb-12 max-w-[715px] text-center lg:mb-16 jos" data-jos_once="1"
-                            data-jos_animation="fade-up" data-jos_counter="1" data-jos_scrolldirection="down">
-                            <p class="text-lg">
-                                Companies of all sizes trust us to find AI SaaS critical to
-                                their growth and innovation
-                            </p>
-                        </div>
-                        <!--Xử lí phần swiper-->
-                        <div class="swiper brand-slider swiper-initialized swiper-horizontal swiper-backface-hidden jos"
-                            data-jos_animation="fade" data-jos_once="1" data-jos_counter="1"
-                            data-jos_scrolldirection="down">
-                            <!--Additional Required Wrapper-->
-                            <div class="swiper-wrapper" id="swiper-wrapper-8938e9509e59da23" aria-live="off"
-                                style="transition-duration: 300ms; transform: translate3d(0px, 0px, 0px);">
-                                <!--Img: brand-1-->
-                                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-1.png" alt="brand-1" width="180"
-                                        height="38">
-                                </div>
-                                <!--Img: brand-2-->
-                                <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-2.png" alt="brand-2" width="180"
-                                        height="38">
-                                </div>
-                                <!--Img: brand-3-->
-                                <div class="swiper-slide" role="group" aria-label="3 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-3.png" alt="brand-3" width="172"
-                                        height="35">
-                                </div>
-                                <!--Img: brand-4-->
-                                <div class="swiper-slide" role="group" aria-label="4 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-4.png" alt="brand-4" width="175"
-                                        height="30">
-                                </div>
-                                <!--Img: brand-5-->
-                                <div class="swiper-slide" role="group" aria-label="5 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-5.png" alt="brand-5" width="168"
-                                        height="36">
-                                </div>
-                                <!--Img: brand-6-->
-                                <div class="swiper-slide" role="group" aria-label="6 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-1.png" alt="brand-1" width="180"
-                                        height="38">
-                                </div>
-                                <!--Img: brand-7-->
-                                <div class="swiper-slide" role="group" aria-label="7 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-2.png" alt="brand-2" width="183"
-                                        height="35">
-                                </div>
-                                <!--Img: brand-8-->
-                                <div class="swiper-slide" role="group" aria-label="8 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-3.png" alt="brand-3" width="172"
-                                        height="35">
-                                </div>
-                                <!--Img: brand-9-->
-                                <div class="swiper-slide" role="group" aria-label="9 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-4.png" alt="brand-4" width="175"
-                                        height="30">
-                                </div>
-                                <!--Img: brand-10-->
-                                <div class="swiper-slide" role="group" aria-label="10 / 10"
-                                    style="width: 176px; margin-right: 105px;">
-                                    <img class="max-w-full" src="./img/layout/brand-5.png" alt="brand-5" width="168"
-                                        height="36">
-                                </div>
-                            </div>
-                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true">
-                            </span>
-                        </div>
-                    </div>
-                    <!--Hero BG Shape 1-->
-                    <!--Xử lí gradient màu cam mờ phía sau-->
-                    <div
-                        class="orange-gradient-1 absolute -right-[150px] top-[370px] -z-[1] h-[500px] w-[500px] animate-spin rounded-[500px]">
-                    </div>
-                    <!--Hero BG Shape 2-->
-                    <div
-                        class="orange-gradient-2 absolute right-[57px] top-[620px] -z-[1] h-[450px] w-[450px] animate-spin rounded-[450px]">
-                    </div>
-                </div>
-                <!--Kha: Hoàn thành build section hero-->
-            </section>
-            <!--Section Services-->
-            <section id="section-service">
-                <!--Section Spacer-->
-                <div class="pb-20 pt-20 xl:pb-[150px] xl:pt-[130px]">
-                    <!--Section Container-->
-                    <div class="global-container">
-                        <!--Section Content-->
-                        <div class="mb-10 lg:mb-16 xl:mb-20 jos" data-jos_once="1" data-jos_animation="fade-up"
-                            data-jos_counter="1" data-jos_scrolldirection="down">
-                            <div class="md:max-w-sm lg:max-w-xl xl:max-w-[746px]">
-                                <h2>
-                                    Core features that make it valuable
-                                </h2>
-                            </div>
-                        </div>
-                        <!--Section List-->
-                        <ul class="grid grid-cols-1 gap-[2px] overflow-hidden rounded-[10px] border-2 border-black bg-black sm:grid-cols-2 lg:grid-cols-4 jos"
-                            data-jos_once="1" data-jos_animation="fade-up" data-jos_counter="1"
-                            data-jos_scrolldirection="down">
-                            <!--Xử lí 4 item-->
-                            <!--Item 1-->
-                            <li class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black">
-                                <div class="relative mb-9 h-[70px] w-[70px]">
-                                    <img src="./img/layout/service-icon-black-1.svg" alt="" width="70" height="70">
-                                    <img class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
-                                        src="./img/layout/service-icon-orange-1.svg" alt="service-icon-orange-1"
-                                        width="70" height="70">
-                                </div>
-                                <h3
-                                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
-                                    <a class="hover:text-colorOrangyRed" href="#">Resource Flexibility</a>
-                                </h3>
-                                <p class="mb-12 duration-300 group-hover:text-white">
-                                    This is an excellent option for people & small businesses
-                                    who are starting out.
-                                </p>
-                                <a class="relative inline-block h-[30px] w-[30px] duration-300" href="#">
-                                    <img src="./img/layout/arrow-right-black.svg" alt="arrow-right-black" width="30"
-                                        height="30">
-                                    <img class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
-                                        src="./img/layout/arrow-right-orange.svg" alt="arrow-right-black" width="30"
-                                        height="30">
-                                </a>
-                            </li>
-                            <!--Item 2-->
-                            <li class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black">
-                                <div class="relative mb-9 h-[70px] w-[70px]">
-                                    <img src="./img/layout/service-icon-black-2.svg" alt="service-icon-black-2"
-                                        width="70" height="70">
-                                    <img src="./img/layout/service-icon-orange-2.svg" alt="service-icon-orange-1"
-                                        width="70" height="70"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </div>
-                                <h3
-                                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
-                                    <a class="hover:text-colorOrangyRed" href="#">
-                                        Managed Services
-                                    </a>
-                                </h3>
-                                <p class="mb-12 duration-300 group-hover:text-white">
-                                    This is an excellent option for people & small businesses
-                                    who are starting out.
-                                </p>
-                                <a class="relative inline-block h-[30px] w-[30px] duration-300" href="#">
-                                    <img src="./img/layout/arrow-right-black.svg" alt="arrow-right-black" width="30"
-                                        height="30">
-                                    <img src="./img/layout/arrow-right-orange.svg" alt="arrow-right-black" width="30"
-                                        height="30"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </a>
-                            </li>
-                            <!--Item 3-->
-                            <li class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black">
-                                <div class="relative mb-9 h-[70px] w-[70px]">
-                                    <img src="./img/layout/service-icon-black-3.svg" alt="service-icon-black-3"
-                                        width="70" height="70">
-                                    <img src="./img/layout/service-icon-orange-3.svg" alt="service-icon-orange-3"
-                                        width="70" height="70"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </div>
-                                <h3
-                                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
-                                    <a class="hover:text-colorOrangyRed" href="#">
-                                        Web-Based Access
-                                    </a>
-                                </h3>
-                                <p class="mb-12 duration-300 group-hover:text-white">
-                                    This is an excellent option for people & small businesses
-                                    who are starting out.
-                                </p>
-                                <a class="relative inline-block h-[30px] w-[30px] duration-300" href="#">
-                                    <img src="./img/layout/arrow-right-black.svg" alt="arrow-right-black" width="30"
-                                        height="30">
-                                    <img src="./img/layout/arrow-right-orange.svg" alt="arrow-right-black" width="30"
-                                        height="30"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </a>
-                            </li>
-                            <!--Item 4-->
-                            <li class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black">
-                                <div class="relative mb-9 h-[70px] w-[70px]">
-                                    <img src="./img/layout/service-icon-black-4.svg" alt="service-icon-black-4"
-                                        width="70" height="70">
-                                    <img src="./img/layout/service-icon-orange-4.svg" alt="service-icon-orange-4"
-                                        width="70" height="70"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </div>
-                                <h3
-                                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
-                                    <a class="hover:text-colorOrangyRed" href="#">
-                                        Resource Flexibility
-                                    </a>
-                                </h3>
-                                <p class="mb-12 duration-300 group-hover:text-white">
-                                    This is an excellent option for people & small businesses
-                                    who are starting out.
-                                </p>
-                                <a class="relative inline-block h-[30px] w-[30px] duration-300" href="#">
-                                    <img src="./img/layout/arrow-right-black.svg" alt="arrow-right-black" width="30"
-                                        height="30">
-                                    <img src="./img/layout/arrow-right-orange.svg" alt="arrow-right-black" width="30"
-                                        height="30"
-                                        class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
-                                </a>
-                            </li>
+                    <!--tag ul, li -> Demo: Home 01 ~ 04-->
+                    <ul class="sub-menu" id="submenu-1">
+                      <li class="sub-menu--item">
+                        <a href="#">Home 01</a>
+                      </li>
+                      <li class="sub-menu--item">
+                        <a href="#">Home 02</a>
+                      </li>
+                      <li class="sub-menu--item">
+                        <a href="#">Home 03</a>
+                      </li>
+                      <li class="sub-menu--item">
+                        <a href="#">Home 04</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!--About-->
+                  <li class="nav-item">
+                    <a class="nav-link-item" href="#">About</a>
+                  </li>
+                  <!--Services-->
+                  <li class="nav-item nav-item-has-children">
+                    <a href="#" class="nav-link-item drop-trigger"
+                      >Services
+                      <img
+                        class="dropdown-icon"
+                        width="16"
+                        height="16"
+                        src="./img/icon/icon-black-cheveron-right.svg"
+                        alt="cheveron-right"
+                      />
+                    </a>
+                    <!--tag ul, li -> Services: Services, Services Details-->
+                    <ul class="sub-menu" id="submenu-2">
+                      <li class="sub-menu--item">
+                        <a href="#">Services</a>
+                      </li>
+                      <li class="sub-menu--item">
+                        <a href="#">Services Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!--Pages-->
+                  <li class="nav-item nav-item-has-children">
+                    <a href="#" class="nav-link-item drop-trigger"
+                      >Pages
+                      <img
+                        class="dropdown-icon"
+                        width="16"
+                        height="16"
+                        src="./img/icon/icon-black-cheveron-right.svg"
+                        alt="cheveron-right"
+                      />
+                    </a>
+                    <!--tag ul, li -> Pages-->
+                    <ul class="sub-menu" id="submenu-3">
+                      <!--tag li: Blogs-->
+                      <li class="sub-menu--item nav-item-has-children">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >Blogs
+                          <img
+                            class="dropdown-icon"
+                            width="16"
+                            height="16"
+                            src="./img/icon/icon-black-cheveron-right.svg"
+                            alt="cheveron-right"
+                          />
+                        </a>
+                        <ul class="sub-menu shape-none" id="submenu-4">
+                          <li class="sub-menu--item">
+                            <a href="#">Blogs</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">Blog Details</a>
+                          </li>
                         </ul>
-                    </div>
+                      </li>
+                      <!--tag li: Team-->
+                      <li class="sub-menu--item nav-item-has-children">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >Team
+                          <img
+                            class="dropdown-icon"
+                            width="16"
+                            height="16"
+                            src="./img/icon/icon-black-cheveron-right.svg"
+                            alt="cheveron-right"
+                          />
+                        </a>
+                        <ul class="sub-menu shape-none" id="submenu-5">
+                          <li class="sub-menu--item">
+                            <a href="#">Teams</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">Team Details</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <!--tag li: FAQ-->
+                      <li class="sub-menu--item nav-item-has-children">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >FAQ
+                          <img
+                            class="dropdown-icon"
+                            width="16"
+                            height="16"
+                            src="./img/icon/icon-black-cheveron-right.svg"
+                            alt="cheveron-right"
+                          />
+                        </a>
+                        <ul class="sub-menu shape-none" id="submenu-6">
+                          <li class="sub-menu--item">
+                            <a href="#">FAQ-1</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">FAQ-2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <!--tag li: Portfolio-->
+                      <li class="sub-menu--item nav-item-has-children">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >Portfolio
+                          <img
+                            class="dropdown-icon"
+                            width="16"
+                            height="16"
+                            src="./img/icon/icon-black-cheveron-right.svg"
+                            alt="cheveron-right"
+                          />
+                        </a>
+                        <ul class="sub-menu shape-none" id="submenu-7">
+                          <li class="sub-menu--item">
+                            <a href="#">Portfolio</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">Portfolio Details</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <!--tag li: Pricing-->
+                      <li class="sub-menu--item">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >Pricing</a
+                        >
+                      </li>
+                      <!--tag li: Utilities: 4 ul/a/li-->
+                      <li class="sub-menu--item nav-item-has-children">
+                        <a class="drop-trigger" data-menu-get="h3" href="#"
+                          >Utilities
+                          <img
+                            class="dropdown-icon"
+                            width="16"
+                            height="16"
+                            src="./img/icon/icon-black-cheveron-right.svg"
+                            alt="cheveron-right"
+                          />
+                        </a>
+                        <ul class="sub-menu shape-none" id="submenu-8">
+                          <li class="sub-menu--item">
+                            <a href="#">Error 404</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">Login</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">SignUp</a>
+                          </li>
+                          <li class="sub-menu--item">
+                            <a href="#">Reset Password</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!--Contacts-->
+                  <li class="nav-item">
+                    <a class="nav-link-item" href="#">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!--User Event-->
+            <div class="flex items-center gap-6">
+              <a
+                class="button hidden rounded-[50px] border-[#7F8995] bg-transparent text-black after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
+                href="#"
+                >Login</a
+              >
+              <a
+                class="button hidden rounded-[50px] border-black bg-black text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white lg:inline-block"
+                href="#"
+                >Sign up free</a
+              >
+              <!--Responsive Offcanvas Menu Button-->
+              <div class="block lg:hidden">
+                <button id="openBtn" class="hamburger-menu mobile-menu-trigger">
+                  <span></span><span></span><span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Kha: Hoàn thành build header-->
+      </header>
+      <!--Phần chính của trang web nằm trong tag <main>, mỗi trang chỉ duy nhất 1 <main>-->
+      <main class="main-wrapper relative overflow-hidden">
+        <!--Section Hero-->
+        <section id="section-hero">
+          <!--Section Spacer-->
+          <div
+            class="relative z-[1] overflow-hidden rounded-bl-[30px] rounded-br-[30px] bg-colorLinenRuffle pb-20 pt-28 lg:rounded-bl-[50px] lg:rounded-br-[50px] lg:pb-24 lg:pt-32 xl:pt-40 xxl:pb-[133px] xxl:pt-[195px]"
+          >
+            <div class="global-container">
+              <!--Xử lí phần text, button-->
+              <div
+                class="mb-14 flex flex-col items-center text-center lg:mb-20"
+              >
+                <!--Text: Simplify your SaaS solution with AI-->
+                <h1
+                  class="slide-from-bottom mb-6 max-w-[510px] lg:max-w-[768px] xl:max-w-[1076px] jos"
+                  data-jos_once="
+                                1"
+                  data-jos_animation="fade-up"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  Simplify your SaaS solution with AI
+                </h1>
+                <!--Tag <p>-->
+                <p
+                  class="slide-from-bottom mb-11 max-w-[700px] text-lg font-semibold sm:text-xl xl:max-w-[980px] jos"
+                  data-jos_once="1"
+                  data-jos_animation="fade-up"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  Our AI SAAS tool is a cloud-based software delivery model. It
+                  helps businesses forecast demand for products and services and
+                  optimize inventory management and supply chain operations.
+                </p>
+                <!--2 button, sử dụng các class tái sử dụng code -->
+                <div
+                  class="flex flex-wrap justify-center gap-6 jos"
+                  data-jos_animation="fade"
+                  data-jos_once="1"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  <a
+                    href="#"
+                    class="button rounded-[50px] border-2 border-black bg-black py-4 text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white"
+                    >Get started for free</a
+                  >
+                  <a
+                    href="#"
+                    class="button rounded-[50px] border-2 border-black bg-transparent py-4 text-black after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white"
+                    >Learn more</a
+                  >
                 </div>
-                <!--Kha: Hoàn thành build section services-->
-            </section>
-            <!--Section Content 1-->
-            <section id="content-1">
-                <!--Section Spacer-->
-                <div class="pb-20 xl:pb-[150px]">
-                    <div class="global-container">
-                        <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32">
-                            <!--Xử lí hình ảnh bên trái-->
-                            <div class="order-2 overflow-hidden rounded-md md:order-1 jos"
-                                data-jos_animation="fade-left" data-jos_once="1" data-jos_counter="1"
-                                data-jos_scrolldirection="down">
-                                <img class="h-auto w-full" src="./img/layout/content-image-1.jpg" alt="content-image-1"
-                                    width="526" height="450">
-                            </div>
-                            <!--Xử lí văn bản bên phải-->
-                            <div class="order-1 md:order-2 jos" data-jos_animation="fade-right" data-jos_once="1"
-                                data-jos_counter="1" data-jos_scrolldirection="down">
-                                <div class="mb-6">
-                                    <h2>Accessible to a wider audience</h2>
-                                </div>
-                                <div class="text-lg leading-[1.4] lg:text-[21px]">
-                                    <p class="mb-7 last:mb-0">
-                                        Advanced AI capabilities accessible to a broader audience,
-                                        including small & medium-sized businesses and individuals
-                                        who may not have the resources or expertise to develop.
-                                    </p>
-                                    <p class="mb-7 last:mb-0">
-                                        Advanced AI capabilities accessible to a broader audience,
-                                        including small & medium-sized businesses and individuals
-                                        who may not have the resources or expertise to develop.
-                                    </p>
-                                </div>
-                            </div>
+              </div>
+              <!--Xử lí phần image-->
+              <div
+                class="hero-img overflow-hidden rounded-2xl bg-black jos"
+                data-jos_animation="zoom"
+                data-jos_once="1"
+                data-jos_counter="1"
+                data-jos_scrolldirection="down"
+              >
+                <img
+                  src="./img/layout/hero-dashboard.jpg"
+                  alt="hero-dashboard"
+                  width="1296"
+                  height="640"
+                  class="h-auto w-full"
+                />
+              </div>
+              <div
+                class="my-10 h-[1px] w-full bg-[#DBD6CF] lg:my-16 xl:my-20"
+              ></div>
+              <div
+                class="mx-auto mb-12 max-w-[715px] text-center lg:mb-16 jos"
+                data-jos_once="1"
+                data-jos_animation="fade-up"
+                data-jos_counter="1"
+                data-jos_scrolldirection="down"
+              >
+                <p class="text-lg">
+                  Companies of all sizes trust us to find AI SaaS critical to
+                  their growth and innovation
+                </p>
+              </div>
+              <!--Xử lí phần swiper-->
+              <div
+                class="swiper brand-slider swiper-initialized swiper-horizontal swiper-backface-hidden jos"
+                data-jos_animation="fade"
+                data-jos_once="1"
+                data-jos_counter="1"
+                data-jos_scrolldirection="down"
+              >
+                <!--Additional Required Wrapper-->
+                <div
+                  class="swiper-wrapper"
+                  id="swiper-wrapper-8938e9509e59da23"
+                  aria-live="off"
+                  style="
+                    transition-duration: 300ms;
+                    transform: translate3d(0px, 0px, 0px);
+                  "
+                >
+                  <!--Img: brand-1-->
+                  <div
+                    class="swiper-slide swiper-slide-active"
+                    role="group"
+                    aria-label="1 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-1.png"
+                      alt="brand-1"
+                      width="180"
+                      height="38"
+                    />
+                  </div>
+                  <!--Img: brand-2-->
+                  <div
+                    class="swiper-slide swiper-slide-active"
+                    role="group"
+                    aria-label="2 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-2.png"
+                      alt="brand-2"
+                      width="180"
+                      height="38"
+                    />
+                  </div>
+                  <!--Img: brand-3-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="3 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-3.png"
+                      alt="brand-3"
+                      width="172"
+                      height="35"
+                    />
+                  </div>
+                  <!--Img: brand-4-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="4 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-4.png"
+                      alt="brand-4"
+                      width="175"
+                      height="30"
+                    />
+                  </div>
+                  <!--Img: brand-5-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="5 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-5.png"
+                      alt="brand-5"
+                      width="168"
+                      height="36"
+                    />
+                  </div>
+                  <!--Img: brand-6-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="6 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-1.png"
+                      alt="brand-1"
+                      width="180"
+                      height="38"
+                    />
+                  </div>
+                  <!--Img: brand-7-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="7 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-2.png"
+                      alt="brand-2"
+                      width="183"
+                      height="35"
+                    />
+                  </div>
+                  <!--Img: brand-8-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="8 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-3.png"
+                      alt="brand-3"
+                      width="172"
+                      height="35"
+                    />
+                  </div>
+                  <!--Img: brand-9-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="9 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-4.png"
+                      alt="brand-4"
+                      width="175"
+                      height="30"
+                    />
+                  </div>
+                  <!--Img: brand-10-->
+                  <div
+                    class="swiper-slide"
+                    role="group"
+                    aria-label="10 / 10"
+                    style="width: 176px; margin-right: 105px"
+                  >
+                    <img
+                      class="max-w-full"
+                      src="./img/layout/brand-5.png"
+                      alt="brand-5"
+                      width="168"
+                      height="36"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="swiper-notification"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                </span>
+              </div>
+            </div>
+            <!--Hero BG Shape 1-->
+            <!--Xử lí gradient màu cam mờ phía sau-->
+            <div
+              class="orange-gradient-1 absolute -right-[150px] top-[370px] -z-[1] h-[500px] w-[500px] animate-spin rounded-[500px]"
+            ></div>
+            <!--Hero BG Shape 2-->
+            <div
+              class="orange-gradient-2 absolute right-[57px] top-[620px] -z-[1] h-[450px] w-[450px] animate-spin rounded-[450px]"
+            ></div>
+          </div>
+          <!--Kha: Hoàn thành build section hero-->
+        </section>
+        <!--Section Services-->
+        <section id="section-service">
+          <!--Section Spacer-->
+          <div class="pb-20 pt-20 xl:pb-[150px] xl:pt-[130px]">
+            <!--Section Container-->
+            <div class="global-container">
+              <!--Section Content-->
+              <div
+                class="mb-10 lg:mb-16 xl:mb-20 jos"
+                data-jos_once="1"
+                data-jos_animation="fade-up"
+                data-jos_counter="1"
+                data-jos_scrolldirection="down"
+              >
+                <div class="md:max-w-sm lg:max-w-xl xl:max-w-[746px]">
+                  <h2>Core features that make it valuable</h2>
+                </div>
+              </div>
+              <!--Section List-->
+              <ul
+                class="grid grid-cols-1 gap-[2px] overflow-hidden rounded-[10px] border-2 border-black bg-black sm:grid-cols-2 lg:grid-cols-4 jos"
+                data-jos_once="1"
+                data-jos_animation="fade-up"
+                data-jos_counter="1"
+                data-jos_scrolldirection="down"
+              >
+                <!--Xử lí 4 item-->
+                <!--Item 1-->
+                <li
+                  class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black"
+                >
+                  <div class="relative mb-9 h-[70px] w-[70px]">
+                    <img
+                      src="./img/layout/service-icon-black-1.svg"
+                      alt=""
+                      width="70"
+                      height="70"
+                    />
+                    <img
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                      src="./img/layout/service-icon-orange-1.svg"
+                      alt="service-icon-orange-1"
+                      width="70"
+                      height="70"
+                    />
+                  </div>
+                  <h3
+                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]"
+                  >
+                    <a class="hover:text-colorOrangyRed" href="#"
+                      >Resource Flexibility</a
+                    >
+                  </h3>
+                  <p class="mb-12 duration-300 group-hover:text-white">
+                    This is an excellent option for people & small businesses
+                    who are starting out.
+                  </p>
+                  <a
+                    class="relative inline-block h-[30px] w-[30px] duration-300"
+                    href="#"
+                  >
+                    <img
+                      src="./img/layout/arrow-right-black.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                    />
+                    <img
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                      src="./img/layout/arrow-right-orange.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                </li>
+                <!--Item 2-->
+                <li
+                  class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black"
+                >
+                  <div class="relative mb-9 h-[70px] w-[70px]">
+                    <img
+                      src="./img/layout/service-icon-black-2.svg"
+                      alt="service-icon-black-2"
+                      width="70"
+                      height="70"
+                    />
+                    <img
+                      src="./img/layout/service-icon-orange-2.svg"
+                      alt="service-icon-orange-1"
+                      width="70"
+                      height="70"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </div>
+                  <h3
+                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]"
+                  >
+                    <a class="hover:text-colorOrangyRed" href="#">
+                      Managed Services
+                    </a>
+                  </h3>
+                  <p class="mb-12 duration-300 group-hover:text-white">
+                    This is an excellent option for people & small businesses
+                    who are starting out.
+                  </p>
+                  <a
+                    class="relative inline-block h-[30px] w-[30px] duration-300"
+                    href="#"
+                  >
+                    <img
+                      src="./img/layout/arrow-right-black.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                    />
+                    <img
+                      src="./img/layout/arrow-right-orange.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </a>
+                </li>
+                <!--Item 3-->
+                <li
+                  class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black"
+                >
+                  <div class="relative mb-9 h-[70px] w-[70px]">
+                    <img
+                      src="./img/layout/service-icon-black-3.svg"
+                      alt="service-icon-black-3"
+                      width="70"
+                      height="70"
+                    />
+                    <img
+                      src="./img/layout/service-icon-orange-3.svg"
+                      alt="service-icon-orange-3"
+                      width="70"
+                      height="70"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </div>
+                  <h3
+                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]"
+                  >
+                    <a class="hover:text-colorOrangyRed" href="#">
+                      Web-Based Access
+                    </a>
+                  </h3>
+                  <p class="mb-12 duration-300 group-hover:text-white">
+                    This is an excellent option for people & small businesses
+                    who are starting out.
+                  </p>
+                  <a
+                    class="relative inline-block h-[30px] w-[30px] duration-300"
+                    href="#"
+                  >
+                    <img
+                      src="./img/layout/arrow-right-black.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                    />
+                    <img
+                      src="./img/layout/arrow-right-orange.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </a>
+                </li>
+                <!--Item 4-->
+                <li
+                  class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black"
+                >
+                  <div class="relative mb-9 h-[70px] w-[70px]">
+                    <img
+                      src="./img/layout/service-icon-black-4.svg"
+                      alt="service-icon-black-4"
+                      width="70"
+                      height="70"
+                    />
+                    <img
+                      src="./img/layout/service-icon-orange-4.svg"
+                      alt="service-icon-orange-4"
+                      width="70"
+                      height="70"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </div>
+                  <h3
+                    class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]"
+                  >
+                    <a class="hover:text-colorOrangyRed" href="#">
+                      Resource Flexibility
+                    </a>
+                  </h3>
+                  <p class="mb-12 duration-300 group-hover:text-white">
+                    This is an excellent option for people & small businesses
+                    who are starting out.
+                  </p>
+                  <a
+                    class="relative inline-block h-[30px] w-[30px] duration-300"
+                    href="#"
+                  >
+                    <img
+                      src="./img/layout/arrow-right-black.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                    />
+                    <img
+                      src="./img/layout/arrow-right-orange.svg"
+                      alt="arrow-right-black"
+                      width="30"
+                      height="30"
+                      class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Kha: Hoàn thành build section services-->
+        </section>
+        <!--Section Content 1-->
+        <section id="content-1">
+          <!--Section Spacer-->
+          <div class="pb-20 xl:pb-[150px]">
+            <div class="global-container">
+              <div
+                class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32"
+              >
+                <!--Xử lí hình ảnh bên trái-->
+                <div
+                  class="order-2 overflow-hidden rounded-md md:order-1 jos"
+                  data-jos_animation="fade-left"
+                  data-jos_once="1"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  <img
+                    class="h-auto w-full"
+                    src="./img/layout/content-image-1.jpg"
+                    alt="content-image-1"
+                    width="526"
+                    height="450"
+                  />
+                </div>
+                <!--Xử lí văn bản bên phải-->
+                <div
+                  class="order-1 md:order-2 jos"
+                  data-jos_animation="fade-right"
+                  data-jos_once="1"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  <div class="mb-6">
+                    <h2>Accessible to a wider audience</h2>
+                  </div>
+                  <div class="text-lg leading-[1.4] lg:text-[21px]">
+                    <p class="mb-7 last:mb-0">
+                      Advanced AI capabilities accessible to a broader audience,
+                      including small & medium-sized businesses and individuals
+                      who may not have the resources or expertise to develop.
+                    </p>
+                    <p class="mb-7 last:mb-0">
+                      Advanced AI capabilities accessible to a broader audience,
+                      including small & medium-sized businesses and individuals
+                      who may not have the resources or expertise to develop.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Kha: Hoàn thành build section content 1-->
+        </section>
+        <!--Section Content 2-->
+        <section id="content-2">
+          <!--Section Spacer-->
+          <div class="pb-20 xl:pb-[150px]">
+            <div class="global-container">
+              <div
+                class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:grid-cols-[minmax(0,_1.2fr)_1fr] xl:gap-28 xxl:gap-32"
+              >
+                <div
+                  class="order-2 overflow-hidden rounded-md jos"
+                  data-jos_animation="fade-left"
+                  data-jos_once="1"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  <img
+                    class="h-auto w-full"
+                    width="526"
+                    height="450"
+                    src="./img/layout/content-image-2.jpg"
+                    alt="content-image-2"
+                  />
+                </div>
+                <div
+                  class="order-1 jos"
+                  data-jos_animation="fade-right"
+                  data-jos_once="1"
+                  data-jos_counter="1"
+                  data-jos_scrolldirection="down"
+                >
+                  <div class="mb-6">
+                    <h2>Providing quick deploy solutions</h2>
+                  </div>
+                  <div class="text-lg leading-[1.4] lg:text-[21px]">
+                    <p class="mb-7 last:mb-0">
+                      Our AI SaaS solutions can be quickly deployed, enabling
+                      users to start benefiting from AI capabilities without
+                      lengthy setup and development times in fast-paced
+                      industries.
+                    </p>
+                    <ul
+                      class="flex flex-col gap-y-5 font-dmSans text-xl leading-tight tracking-tighter text-black lg:mt-12 lg:text-[28px]"
+                    >
+                      <!--Thẻ li text: Ready-to-use AI capabilities system-->
+                      <li class="flex items-start gap-x-3">
+                        <div class="mt-[2.5px] h-[30px] w-[30px]">
+                          <img
+                            class="h-full w-full"
+                            width="30"
+                            height="30"
+                            src="./img/layout/check-circle.svg"
+                            alt="check-circle"
+                          />
                         </div>
-                    </div>
-                </div>
-                <!--Kha: Hoàn thành build section content 1-->
-            </section>
-            <!--Section Content 2-->
-            <section id="content-2">
-                <!--Section Spacer-->
-                <div class="pb-20 xl:pb-[150px]">
-                    <div class="global-container">
-                        <div
-                            class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:grid-cols-[minmax(0,_1.2fr)_1fr] xl:gap-28 xxl:gap-32">
-                            <div class="order-2 overflow-hidden rounded-md jos" data-jos_animation="fade-left"
-                                data-jos_once="1" data-jos_counter="1" data-jos_scrolldirection="down">
-                                <img class="h-auto w-full" width="526" height="450"
-                                    src="./img/layout/content-image-2.jpg" alt="content-image-2">
-                            </div>
-                            <div class="order-1 jos" data-jos_animation="fade-right" data-jos_once="1"
-                                data-jos_counter="1" data-jos_scrolldirection="down">
-                                <div class="mb-6">
-                                    <h2>Providing quick deploy solutions</h2>
-                                </div>
-                                <div class="text-lg leading-[1.4] lg:text-[21px]">
-                                    <p class="mb-7 last:mb-0">
-                                        Our AI SaaS solutions can be quickly deployed, enabling
-                                        users to start benefiting from AI capabilities without
-                                        lengthy setup and development times in fast-paced
-                                        industries.
-                                    </p>
-                                    <ul
-                                        class="flex flex-col gap-y-5 font-dmSans text-xl leading-tight tracking-tighter text-black lg:mt-12 lg:text-[28px]">
-                                        <!--Thẻ li text: Ready-to-use AI capabilities system-->
-                                        <li class="flex items-start gap-x-3">
-                                            <div class="mt-[2.5px] h-[30px] w-[30px]">
-                                                <img class="h-full w-full" width="30" height="30"
-                                                    src="./img/layout/check-circle.svg" alt="check-circle">
-                                            </div>
-                                            Ready-to-use AI capabilities system
-                                        </li>
-                                        <!--Thẻ li text: Users can quickly integrate AI features-->
-                                        <li class="flex items-start gap-x-3">
-                                            <div class="mt-[2.5px] h-[30px] w-[30px]">
-                                                <img src="./img/layout/check-circle.svg" alt="check-circle" width="30"
-                                                    height="30" class="h-full w-full">
-                                            </div>
-                                            Users can quickly integrate AI features
-                                        </li>
-                                        <!--Thẻ li text: Time savings translate to cost savings-->
-                                        <li class="flex items-start gap-x-3">
-                                            <div class="mt-[2.5px] h-[30px] w-[30px]">
-                                                <img src="./img/layout/check-circle.svg" alt="check-circle" width="30"
-                                                    height="30" class="h-full w-full">
-                                            </div>
-                                            Time savings translate to cost savings
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        Ready-to-use AI capabilities system
+                      </li>
+                      <!--Thẻ li text: Users can quickly integrate AI features-->
+                      <li class="flex items-start gap-x-3">
+                        <div class="mt-[2.5px] h-[30px] w-[30px]">
+                          <img
+                            src="./img/layout/check-circle.svg"
+                            alt="check-circle"
+                            width="30"
+                            height="30"
+                            class="h-full w-full"
+                          />
                         </div>
-                    </div>
+                        Users can quickly integrate AI features
+                      </li>
+                      <!--Thẻ li text: Time savings translate to cost savings-->
+                      <li class="flex items-start gap-x-3">
+                        <div class="mt-[2.5px] h-[30px] w-[30px]">
+                          <img
+                            src="./img/layout/check-circle.svg"
+                            alt="check-circle"
+                            width="30"
+                            height="30"
+                            class="h-full w-full"
+                          />
+                        </div>
+                        Time savings translate to cost savings
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!--Kha: Hoàn thành build section content 2-->
-            </section>
-        </main>
+              </div>
+            </div>
+          </div>
+          <!--Kha: Hoàn thành build section content 2-->
+        </section>
+        <!-- funfact section starts here - Quoc Ai -->
+        <section id="funfact-section">
+          <div class="mx-auto max-w-[1500px px-5]">
+            <div
+              class="grid grid-cols-1 overflow-hidden rounded-[30px] bg-black lg:rounded-[50px] xl:grid-cols-[minmax(400px,_1fr)_1.5fr] xxl:grid-cols-[1fr_minmax(800px,_1fr)]"
+            >
+              <!-- funface left block  -->
+              <div
+                class="relative overflow-hidden rounded-[30px] lg:rounded-[50px]"
+              >
+                <img
+                  src="./img/layout/funfact-image.jpg"
+                  alt="funfact-image"
+                  width="721"
+                  height="784"
+                  class="h-80 w-full object-cover object-center lg:h-[35rem] xl:h-full"
+                />
+                <!-- video play button  -->
+                <a
+                  href="https://www.youtube.com/watch?v=3nQNiWdeH2Q"
+                  class="absolute left-1/2 top-1/2 z-[1] -translate-x-1/2 -translate-y-1/2"
+                >
+                  <div
+                    class="relative flex h-[120px] w-[120px] items-center justify-center rounded-full border-[3px] border-black text-lg font-bold backdrop-blur-[2px] transition-all duration-300 hover:bg-colorOrangyRed hover:text-white"
+                  >
+                    play
+                    <div
+                      class="absolute -z-[1] h-[110%] w-[110%] animate-[ping_1.5s_easeease-in-out_infinite] rounded-full bg-gray-600 opacity-30"
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <!-- funfact right block  -->
+              <div
+                class="self-center px-6 py-16 sm:py-20 md:px-16 xl:px-10 xl:py-24 xxl:py-32 xxl:pl16 xxl:pr-28"
+              >
+                <div class="mb-8 lg:mb-18 xl:mb-6">
+                  <h2 class="text-white">AI-powered that streamline tasks</h2>
+                </div>
+                <div
+                  class="text-left text-lg leading-[1.4] text-white lg:text-[21px]"
+                >
+                  <p>
+                    As your business grows or your AI SaaS needs change, you can
+                    easily adjust your subscription level to match those needs.
+                    This flexibility ensures that AI remains an asset.
+                  </p>
+                </div>
+                <!-- horizontal seperator  -->
+                <div my-14 h-[1px] w-full bg-colorCodGray></div>
+                <!-- counter  -->
+                <ul
+                  class="flex flex-col justify-center gap-x-11 gap-y-8 text-center sm:flex-row md:text-left xl:justify-normal xl:text-left xxl:gap-x-20"
+                >
+                  <li>
+                    <h3
+                      class="text-5xl text-colorOrangyRed md:text-6xl lg:text-7xl xxl:text-[120px]"
+                    >
+                      92%
+                    </h3>
+                    <span
+                      class="block text-lg font-normal text-white lg:text-[21px]"
+                      >Customer service inquiries
+                    </span>
+                  </li>
+                  <li>
+                    <h3
+                      class="text-5xl text-colorOrangyRed md:text-6xl lg:text-7xl xxl:text-[120px]"
+                    >
+                      75%
+                    </h3>
+                    <span
+                      class="block text-lg font-normal text-white lg:text-[21px]"
+                      >Using financial institutions</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- pricing section starts here - Quoc Ai -->
+        <section id="pricing-section"></section>
+        <!-- FAQ section starts here - Quoc Ai -->
+        <section id="faq-section"></section>
+        <!-- testimonial section starts here - Quoc Ai -->
+        <section id="testimonial-section"></section>
+        <!-- body background shape 1 - Quoc Ai -->
+        <div></div>
+        <!-- body background shape 2 - Quoc Ai -->
+        <div></div>
+      </main>
     </div>
     <!--Import Flowbite JS-->
-    <script src="./node_modules/flowbite/dist/flowbite.min.js">
-    </script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!--Import Swiper js-->
-    <script src="./js/swiper-bundle.min.js">
-    </script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <!--Import Jos Js-->
     <script src="./js/jos.min.js"></script>
     <!--Import Menu Js-->
     <script src="./js/menu.js"></script>
     <!--Import Main Js: Swiper Init-->
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
